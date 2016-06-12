@@ -1,0 +1,162 @@
+.circleTest {
+    position: absolute;
+    width: 20em;
+    height: 20em;
+    font-size: 20px;
+    border-radius: 50%;
+    padding: 10px;
+    border: 3px solid rgb(210, 39, 142);
+}
+    .circleTest .point{
+        position: relative;
+        width: 10em;
+        height: 10em;
+        margin: auto;
+        background-color: red;
+    }
+
+.circleTest::before {
+    position: absolute;
+    margin: auto;
+    width: 20em;
+    height: 20em;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: '';
+    border-radius: 50%;
+    background-color: rgb(39, 178, 212);
+    border: 3px solid rgb(210, 39, 142);
+}
+
+.editBox{
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    width: 250px;
+    height: 30px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px rgb(0, 0, 0);
+    box-sizing: border-box;
+    padding: 5px;
+}
+    .editBox:focus{
+        outline:none;
+    }
+
+.ne-box{
+    position: absolute;
+    top: 200px;
+    left: 100px;
+    width: 200px;
+}
+    .ne-content{
+        font-size: 20px;
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        max-width: none;
+        max-height: none;
+        margin: 0;
+        outline: 0;
+        word-wrap: break-word;
+    }
+        .ne-content::before{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            content: '';
+            z-index: 1;
+            opacity: 0;
+            background-color: rgba(0,0,0,0);
+        }
+    .ne-focus{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        /*visibility: hidden;*/
+        z-index: 255;
+        pointer-events: none;
+        border: 1px solid #1baee1;
+        font-size: 12px;
+    }
+
+/**
+ * 請參考伏羲先天八卦圖
+ */
+.anchor{
+    position: absolute;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    background: #fff;
+    border: 1px solid #1baee1;
+    cursor: pointer;
+    pointer-events: all;
+}
+    .anchor[ne-orientation=o9]{
+        left: 50%;
+        bottom: 100%;
+        margin-left: -0.5em;
+        margin-bottom: -0.4em;
+        cursor: row-resize;
+    }
+    .anchor[ne-orientation=o7]{
+        left: 100%;
+        top: 50%;
+        margin-top: -0.5em;
+        margin-left: -0.4em;
+        cursor: col-resize;
+        background-color: red;
+    }
+    .anchor[ne-orientation=o1]{
+        left: 50%;
+        top: 100%;
+        margin-left: -0.5em;
+        margin-top: -0.4em;
+        cursor: row-resize;
+    }
+    .anchor[ne-orientation=o3]{
+        right: 100%;
+        top: 50%;
+        margin-top: -0.5em;
+        margin-right: -0.4em;
+        cursor: col-resize;
+        background-color: green;
+    }
+    .anchor[ne-orientation=o4]{
+        right: 100%;
+        bottom: 100%;
+        margin-right: -0.4em;
+        margin-bottom: -0.4em;
+        cursor: nw-resize;
+    }
+    .anchor[ne-orientation=o2]{
+        left: 100%;
+        bottom: 100%;
+        margin-left: -0.4em;
+        margin-bottom: -0.4em;
+        cursor: ne-resize;
+    }
+    .anchor[ne-orientation=o6]{
+        left: 100%;
+        top: 100%;
+        margin-left: -0.4em;
+        margin-top: -0.4em;
+        cursor: se-resize;
+    }
+    .anchor[ne-orientation=o8]{
+        right: 100%;
+        top: 100%;
+        margin-right: -0.4em;
+        margin-top: -0.4em;
+        cursor: sw-resize;
+    }

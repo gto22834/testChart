@@ -1,0 +1,207 @@
+/* 清除内外边距 */
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, /* structural elements 结构元素 */
+dl, dt, dd, ul, ol, li, /* list elements 列表元素 */
+pre, /* text formatting elements 文本格式元素 */
+fieldset, lengend, button, input, textarea, /* form elements 表单元素 */
+th, td { /* table elements 表格元素 */
+    margin: 0;
+    padding: 0;
+}
+
+/* 设置默认字体 */
+body,
+button,
+input,
+select,
+textarea { /* for ie */
+    /*font: 12px/1 Tahoma, Helvetica, Arial, "宋体", sans-serif;*/
+    /*font: 12px/1 Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif; /* 用 ascii 字符表示，使得在任何编码下都无问题 */
+}
+
+h1 { font-size: 60px; /* 18px / 12px = 1.5 */ }
+h2 { font-size: 40px; }
+h3 { font-size: 30px; }
+h4, h5, h6 { font-size: 100%; }
+
+address, cite, dfn, em, var { font-style: normal; } /* 将斜体扶正 */
+code, kbd, pre, samp, tt { font-family: "Courier New", Courier, monospace; } /* 统一等宽字体 */
+small { font-size: 12px; } /* 小于 12px 的中文很难阅读，让 small 正常化 */
+
+/* 重置列表元素 */
+ul, ol { list-style: none; }
+
+/* 重置文本格式元素 */
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+abbr[title], acronym[title] { /* 注：1.ie6 不支持 abbr; 2.这里用了属性选择符，ie6 下无效果 */
+    border-bottom: 1px dotted;
+    cursor: help;
+}
+
+q:before, q:after { content: ''; }
+
+/* 重置表单元素 */
+legend { color: #000000; } /* for ie6 */
+fieldset,
+img { border: none; } /* img 搭车：让链接里的 img 无边框 */
+/* 注：optgroup 无法扶正 */
+button,
+input,
+select,
+textarea {
+    font-size: 100%; /* 使得表单元素在 ie 下能继承字体大小 */
+    outline: none;
+}
+
+/* 重置表格元素 */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* 重置 hr */
+hr {
+    border: none;
+    height: 1px;
+}
+
+/* 让非ie浏览器默认也显示垂直滚动条，防止因滚动条引起的闪烁 */
+html { overflow-y: scroll; }
+
+/**
+ * 取消選取時候的框線
+ */
+#ne-section div[contenteditable] {
+    outline: none;
+}
+#ne-section {
+    position: absolute;
+    width: 640px;
+    height: 965px;
+    left: 50%;
+    top: 50%;
+    bottom: auto;
+    right: auto;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+#ne-section:-webkit-full-screen {
+  width: 100%;
+  height: 100%;
+}
+.NED-frame {
+    position: absolute;
+}
+section {
+    position: relative;
+    width: 640px;
+    height: 960px;
+    margin: 0 0 5px 0;
+    box-shadow: 1px 0 2px #C7C7C7;
+    transition: left .5s, right .5s;
+    -moz-transition: left .5s, right .5s; /* Firefox 4 */
+    -webkit-transition: left .5s, right .5s; /* Safari 和 Chrome */
+    -o-transition: left .5s, right .5s; /* Opera */
+}
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.ne-focus {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 255;
+    pointer-events: none;
+    border: 1px solid #1BAEE1;
+    font-size: 12px;
+    border-radius: inherit;
+}
+    /**
+     * 請參考伏羲先天八卦圖
+     */
+    .ne-focus .NED-anchor {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        pointer-events: all;
+    }
+        .ne-focus .NED-anchor .NED-icon {
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            left: 50%;
+            top: 50%;
+            border-radius: 50%;
+            border: 1px solid #1BAEE1;
+            background-color: #FFFFFF;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+        }
+        .ne-focus .NED-anchor[ne-orientation = o9] {
+            left: 50%;
+            bottom: 100%;
+            margin-left: -20px;
+            margin-bottom: -20px;
+            cursor: row-resize;
+        }
+        .ne-focus .NED-anchor[ne-orientation = o7] {
+            left: 100%;
+            top: 50%;
+            margin-top: -20px;
+            margin-left: -20px;
+            cursor: col-resize;
+        }
+        .ne-focus .NED-anchor[ne-orientation = o1] {
+            left: 50%;
+            top: 100%;
+            margin-left: -20px;
+            margin-top: -20px;
+            cursor: row-resize;
+        }
+        .ne-focus .NED-anchor[ne-orientation = o3] {
+            right: 100%;
+            top: 50%;
+            margin-top: -20px;
+            margin-right: -20px;
+            cursor: col-resize;
+        }
+        .ne-focus .NED-anchor[ne-orientation = o4] {
+            right: 100%;
+            bottom: 100%;
+            margin-right: -20px;
+            margin-bottom: -20px;
+            cursor: nw-resize;
+        }
+        .ne-focus .NED-anchor[ne-orientation = o2] {
+            left: 100%;
+            bottom: 100%;
+            margin-left: -20px;
+            margin-bottom: -20px;
+            cursor: ne-resize;
+        }
+        .ne-focus .NED-anchor[ne-orientation = o6] {
+            left: 100%;
+            top: 100%;
+            margin-left: -20px;
+            margin-top: -20px;
+            cursor: se-resize;
+        }
+        .ne-focus .NED-anchor[ne-orientation = o8] {
+            right: 100%;
+            top: 100%;
+            margin-right: -20px;
+            margin-top: -20px;
+            cursor: sw-resize;
+        }

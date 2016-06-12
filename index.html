@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>網頁功能測試 複習</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<meta charset="UTF-8"/>
+
+<link rel="stylesheet" type="text/css" href="assets/css/common.css">
+<link rel="stylesheet" type="text/css" href="assets/css/Layout.css">
+<link rel="stylesheet" href="assets/fontello/css/fontello.css">
+<link rel="stylesheet" href="assets/fontello/css/animation.css">
+</head>
+
+<body>
+<script src="lib/KuLib.js"></script>
+<script src="lib/cropperjs/cropper.js"></script>
+<script src="lib/chart/Chart.js"></script>
+<script src="src/app.js"></script>
+<script type="text/javascript" src="node_modules/rasterizehtml/dist/rasterizeHTML.allinone.js"></script>
+<script type="text/javascript">
+    window.onload = function () {
+        $Test.init();
+    };
+</script>
+
+    <div id="ne-section">
+        <section>
+            <img src="images/Front_cover.png" />
+            <!--circle test-->
+            <div class="circleTest">
+                <div class="point">
+
+                </div>
+            </div>
+            <!--edit div-->
+            <div class="editBox" contenteditable="true">即將要被修改的內容</div>
+            <!--draggable test-->
+            <div class="ne-box" style="width: 100px; left: 100px">
+                <div class="ne-content" contenteditable="true">
+                    Test for drag
+                </div>
+                <div class="ne-focus">
+                    <div class="anchor" ne-orientation="o1"></div>
+                    <div class="anchor" ne-orientation="o2"></div>
+                    <div class="anchor" ne-orientation="o3"></div>
+                    <div class="anchor" ne-orientation="o4"></div>
+                    <div class="anchor" ne-orientation="o6"></div>
+                    <div class="anchor" ne-orientation="o7"></div>
+                    <div class="anchor" ne-orientation="o8"></div>
+                    <div class="anchor" ne-orientation="o9"></div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <canvas id="canvasTest" width="640" height="960"></canvas>
+
+    <div class="test">
+
+    </div>
+    <!-- <script src="index.js"></script> -->
+</body>
+
+</html>

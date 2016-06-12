@@ -1,0 +1,142 @@
+section img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+img.NED-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.NED-layout1 .NED-header {
+    position: absolute;
+    width: 100%;
+    height: 134px;
+    top: 0px;
+}
+    .NED-layout1 .NED-header .NED-header_text {
+        position: absolute;
+        width: 300px;
+        font-size: 40px;
+        font-weight: bold;
+        top: 45px;
+        left: 170px;
+        text-align: center;
+    }
+.NED-layout1 .NED-center {
+    position: absolute;
+    width: 100%;
+    height: 588px;
+    margin: 42px 0;
+    top: 134px;
+}
+    .NED-layout1 .NED-center .NED-item1 {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+    .NED-layout1 .NED-center .NED-item2 {
+        position: relative;
+        width: 100%;
+        height: 50%;
+    }
+    .NED-layout1 .NED-center .NED-item3 {
+        position: relative;
+        width: 100%;
+        height: 33%;
+    }
+    .NED-layout1 .NED-center .NED-item4 {
+        position: relative;
+        width: 100%;
+        height: 25%;
+    }
+.NED-layout1 .NED-footer {
+    position: absolute;
+    width: 100%;
+    height: 94px;
+    bottom: 0px;
+}
+
+.NED-layout2 .NED-header {
+    position: absolute;
+    width: 100%;
+    height: 134px;
+    top: 0px;
+}
+    .NED-layout2 .NED-header .NED-header_text {
+        position: absolute;
+        width: 300px;
+        font-size: 40px;
+        font-weight: bold;
+        top: 45px;
+        left: 170px;
+        text-align: center;
+    }
+.NED-layout2 .NED-center {
+    position: absolute;
+    width: 100%;
+    height: 672px;
+    top: 134px;
+    display: flex;
+    align-content: center;
+}
+    .NED-layout2 .NED-center .NED-text{
+        position: absolute;
+        width: 100%;
+        height: 168px;
+    }
+    .NED-layout2 .NED-center .NED-content {
+        position: absolute;
+        width: 100%;
+        height: 504px;
+        top: 168px;
+        display: flex;
+        flex-flow: row wrap;
+    }
+        .NED-layout2 .NED-center .NED-content .NED-item1 {
+            position:relative;
+            width: 100%;
+            height: 100%;
+        }
+        .NED-layout2 .NED-center .NED-content .NED-item2{
+            position: relative;
+            width: 50%;
+            height: 100%;
+        }
+        .NED-layout2 .NED-center .NED-content .NED-item3_1{
+            position: relative;
+            width: 100%;
+            height: 50%;
+        }
+        .NED-layout2 .NED-center .NED-content .NED-item3{
+            position: relative;
+            width: 50%;
+            height: 50%;
+        }
+        .NED-layout2 .NED-center .NED-content .NED-item4{
+            position: relative;
+            width: 50%;
+            height: 50%;
+        }
+.NED-layout2 .NED-footer {
+    position: absolute;
+    width: 100%;
+    height: 94px;
+    bottom: 0px;
+}
+
+.NED-layoutA2 .NED-header {
+    position: absolute;
+    width: 100%;
+    height: 164px;
+    top: 0;
+    left: 0;
+}
+/*.NED-layoutA2 .NED-center {
+    position: absolute;
+    width: 100%;
+    height: 164px;
+    top: 0;
+    left: 0;
+}*/

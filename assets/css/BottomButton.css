@@ -1,0 +1,655 @@
+/**
+ * bottom UI
+ */
+#bottomButton {
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    bottom: 0;
+}
+    #bottomButton .background {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #303030;
+        border-top: 1px solid #000000;
+        display: flex;
+    }
+    #bottomButton .background .btnLeft {
+        position: relative;
+        width: 30%;
+        height: 100%;
+        background: none;
+        font-size: 18px;
+        color: #F6C76B;
+        border-top: none;
+        border-left: none;
+        border-bottom: none;
+        border-right: 1px solid #F6C76B;
+        flex: 1;
+    }
+        #bottomButton .background .last {
+            border-top: none;
+            border-left: none;
+            border-bottom: none;
+            border-right: none;
+        }
+    #bottomButton .btnRight {
+        position: relative;
+        background: none;
+        width: 50%;
+        height: 100%;
+        font-size: 18px;
+        float: right;
+        color: #F6C76B;
+        border-top: none;
+        border-left: none;
+        border-bottom: none;
+        border-right: 1px solid #F6C76B;
+        flex: 1;
+    }
+        #bottomButton .btnRight:nth-child(1) {
+            border-right: none;
+        }
+    #bottomButton .control {
+        position: relative;
+        width: 135px;
+        height: 100%;
+        float: right;
+    }
+    /**
+     * plus UI
+     */
+    #bottomButton .plusPanel {
+        position: absolute;
+        width: 100%;
+        height: 38px;
+        background-color: #303030;
+        top: -18px;
+        padding: 5px 0 5px 0;
+        left: 0;
+        /* animation-fill-mode */
+        -moz-animation: plusFadeIn .2s linear forwards;
+        -o-animation: plusFadeIn .2s linear forwards;
+        -webkit-animation: plusFadeIn .2s linear forwards;
+        animation: plusFadeIn .2s linear forwards;
+    }
+        #bottomButton .plusPanel .btnPlus {
+            position: relative;
+            float: left;
+            width: 33.3%;
+            height: 100%;
+            background-color: #EBEBEB;
+            color: #303030;
+            border-top: none;
+            border-left: none;
+            border-bottom: none;
+            border-right: 1px solid #303030;
+        }
+            #bottomButton .plusPanel .btnPlus:nth-child(3) {
+                width: 33.4%;
+                border-right: none;
+            }
+            #bottomButton .plusPanel .btnPlus:disabled {
+                color: #6E6E6E;
+                background-color: #CBCBCB;
+            }
+/**
+ * image UI
+ */
+#imageEditBox {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #303030;
+    top: 0;
+    left: 0;
+    display: none;
+    /* animation-fill-mode */
+    -moz-animation: fadeIn .2s linear forwards;
+    -o-animation: fadeIn .2s linear forwards;
+    -webkit-animation: fadeIn .2s linear forwards;
+    animation: fadeIn .2s linear forwards;
+}
+    #imageEditBox .btnLeft {
+        flex: 1;
+        background: none;
+        font-size: 18px;
+        color: #F6C76B;
+        border-top: none;
+        border-left: none;
+        border-bottom: none;
+        border-right: 1px solid #F6C76B;
+    }
+        #imageEditBox .btnLeft:nth-last-child(1) {
+            border-right: none;
+        }
+/**
+ * text edit UI
+ */
+#textEditBox {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #303030;
+    display: flex;
+    /* animation-fill-mode */
+    -moz-animation: fadeIn .2s linear forwards;
+    -o-animation: fadeIn .2s linear forwards;
+    -webkit-animation: fadeIn .2s linear forwards;
+    animation: fadeIn .2s linear forwards;
+}
+    #textEditBox .btn {
+        flex: 1;
+        font-size: 18px;
+        font-weight: bold;
+        color: #F6C76B;
+        text-align: center;
+        line-height: 30px;
+        border-top: none;
+        border-left: none;
+        border-bottom: none;
+        border-right: 1px solid #F6C76B;
+        background: none;
+    }
+        #textEditBox .btn:nth-child(3) {
+            border-right: none;
+        }
+/**
+ * change font type UI
+ */
+#fontEditBox {
+    position: absolute;
+    width: 100%;
+    height: 120px;
+    top: -131px;
+    left: 0;
+    display: none;
+    background-color: #EBEBEB;
+    border-top: 5px solid #303030;
+    border-bottom: 5px solid #303030;
+    -moz-animation: fadeIn .2s linear forwards;
+    -o-animation: fadeIn .2s linear forwards;
+    -webkit-animation: fadeIn .2s linear forwards;
+    animation: fadeIn .2s linear forwards;
+}
+    #fontEditBox .colorBox {
+        position: absolute;
+        width: 94%;
+        height: 55px;
+        left: 3%;
+        top: 37px;
+        overflow-y: hidden;
+        overflow-x: auto;
+        border-radius: 5px;
+    }
+        #fontEditBox .colorEdge {
+            position: absolute;
+            width: 800px;
+            height: 35px;
+        }
+            #fontEditBox .colorEdge .color {
+                position: relative;
+                float: left;
+                width: 20px;
+                height: 20px;
+                margin: 10px 10px 0 0;
+                border: 2px solid #5D5D5D;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 2px;
+                border-bottom-left-radius: 2px;
+                border-bottom-right-radius: 10px;
+                box-shadow: inset 0 0 5px #000000;
+            }
+    #fontEditBox .fontAlign {
+        position: absolute;
+        width: 30%;
+        height: 32px;
+        top: 5px;
+        left: 3%;
+    }
+        #fontEditBox .btnAlignLeft {
+            position: relative;
+            width: 30%;
+            height: 100%;
+            padding: 0;
+            background: #303030;
+            margin: 0 -1px 0 0;
+            font-size: 20px;
+            line-height: 30px;
+            color: #F6C76B;
+            border: 1px solid #000000;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            border-top-left-radius: 2px;
+            border-bottom-left-radius: 2px;
+        }
+        #fontEditBox .btnAlignCenter {
+            position: relative;
+            width: 30%;
+            height: 100%;
+            padding: 0;
+            margin: 0 -1px 0 0;
+            background: #303030;
+            border: 1px solid #000000;
+            font-size: 20px;
+            line-height: 30px;
+            color: #F6C76B;
+        }
+        #fontEditBox .btnAlignRight {
+            position: relative;
+            width: 30%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            background: #303030;
+            font-size: 20px;
+            line-height: 30px;
+            color: #F6C76B;
+            border: 1px solid #000000;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            border-top-right-radius: 2px;
+            border-bottom-right-radius: 2px;
+        }
+    /**
+     * fontSize UI
+     */
+    #fontSizeInput {
+        position: absolute;
+        width: 94%;
+        height: 30px;
+        top: 85px;
+        left: 3%;
+        border-radius: 2px;
+        background-color: #303030;
+    }
+        #fontSizeInput .slide {
+            position: relative;
+            width: 90%;
+            height: 5px;
+            top: 50%;
+            left: 5%;
+            border-radius: 10px;
+            margin: -3px 0 0 0;
+            background-color: #EBEBEB;
+        }
+            #fontSizeInput .slide .slideCount {
+                width: 0;
+                height: 100%;
+                background-color: #E8B960;
+                border-radius: 10px;
+            }
+        #fontSizeInput .thumb {
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            left: -10px;
+            top: -9px;
+            border-radius: 10px;
+            border: 3px solid #F6C76B;
+            background-color: #F54F45;
+            box-shadow: 1px 1px 2px #000000, inset 0 0 2px #000000;
+        }
+/**
+ * The box of input text
+ */
+#textInputBox {
+    position: fixed;
+    width: 100%;
+    height: 30px;
+    bottom: -30px;
+    border-top: 5px solid #303030;
+    border-bottom: 5px solid #303030;
+    display: none;
+
+    -moz-animation: plusFadeIn .2s linear forwards;
+    -o-animation: plusFadeIn .2s linear forwards;
+    -webkit-animation: plusFadeIn .2s linear forwards;
+    animation: plusFadeIn .2s linear forwards;
+}
+    #textInputBox .input {
+        position: absolute;
+        width: 80%;
+        height: 100%;
+        bottom: 0;
+        border: none;
+        padding: 0 2%;
+        border-top: 1px solid #CBCBCB;
+        border-right: 1px solid #CBCBCB;
+        border-bottom: 1px solid #CBCBCB;
+        box-sizing: border-box;
+        background-color: #EBEBEB;
+    }
+    #textInputBox .btn {
+        position: absolute;
+        width: 20%;
+        height: 100%;
+        right: 0;
+        font-size: 20px;
+        font-weight: bold;
+        background-color: #F6C76B;
+        color: #303030;
+        box-sizing: border-box;
+        border: none;
+        box-shadow: inset -1px -1px 1px #6F4600;
+    }
+
+/**
+ * change template UI
+ */
+#templateUI {
+    position: absolute;
+    width: 100%;
+    height: 500px;
+    bottom: 41px;
+    left: 0;
+    display: none;
+    background-color: #EBEBEB;
+    border-top: 5px solid #303030;
+    border-bottom: 5px solid #303030;
+}
+    #templateUI .close {
+        position: absolute;
+        width: 100%;
+        height: 40px;
+        text-align: center;
+        background-color: #F6C76B;
+        border: none;
+    }
+    #templateUI .templateBox {
+        position: absolute;
+        width: 96%;
+        height: 445px;
+        margin: 0 0 0 4%;
+        bottom: 0;
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+    #templateUI .templateBox .template {
+        position: relative;
+        float: left;
+        width: 28%;
+        height: 30%;
+        margin: 0 3% 3% 0;
+        border: 3px solid #F6C76B;
+        box-shadow: 0 0 2px #000000;
+    }
+        #templateUI .templateBox .template img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        #templateUI .templateBox .template .selected {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            font-size: 25px;
+            text-align: center;
+            line-height: 30px;
+            right: -2px;
+            bottom: -3px;
+            background-color: #F6C76B;
+            border-top-left-radius: 20px;
+        }
+
+@-moz-keyframes plusFadeIn {
+    0% {
+        -moz-transform: translateY(0);
+        -o-transform: translateY(0);
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 0;
+    }
+
+    100% {
+        -moz-transform: translateY(-30px);
+        -o-transform: translateY(-30px);
+        -webkit-transform: translateY(-30px);
+        transform: translateY(-30px);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes plusFadeIn {
+    0% {
+        -moz-transform: translateY(0);
+        -o-transform: translateY(0);
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 0;
+    }
+
+    100% {
+        -moz-transform: translateY(-30px);
+        -o-transform: translateY(-30px);
+        -webkit-transform: translateY(-30px);
+        transform: translateY(-30px);
+        opacity: 1;
+    }
+}
+
+@-o-keyframes plusFadeIn {
+    0% {
+        -moz-transform: translateY(0);
+        -o-transform: translateY(0);
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 0;
+    }
+
+    100% {
+        -moz-transform: translateY(-30px);
+        -o-transform: translateY(-30px);
+        -webkit-transform: translateY(-30px);
+        transform: translateY(-30px);
+        opacity: 1;
+    }
+}
+
+@-ms-keyframes plusFadeIn {
+    0% {
+        -moz-transform: translateY(0);
+        -o-transform: translateY(0);
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 0;
+    }
+
+    100% {
+        -moz-transform: translateY(-30px);
+        -o-transform: translateY(-30px);
+        -webkit-transform: translateY(-30px);
+        transform: translateY(-30px);
+        opacity: 1;
+    }
+}
+
+@keyframes plusFadeIn {
+    0% {
+        -moz-transform: translateY(0);
+        -o-transform: translateY(0);
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 0;
+    }
+
+    100% {
+        -moz-transform: translateY(-30px);
+        -o-transform: translateY(-30px);
+        -webkit-transform: translateY(-30px);
+        transform: translateY(-30px);
+        opacity: 1;
+    }
+}
+
+/**
+ * fadIn animation
+ */
+@-moz-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-ms-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* #slider {
+	width: 400px;
+	height: 17px;
+	position: relative;
+	margin: 100px auto;
+	background: #10171D;
+
+	-webkit-border-radius: 40px;
+	-moz-border-radius: 40px;
+	border-radius: 40px;
+
+	-webkit-box-shadow: inset 0px 0px 1px 1px rgba(0, 0, 0, 0.9), 0px 1px 1px 0px rgba(255, 255, 255, 0.13);
+	-moz-box-shadow: inset 0px 0px 1px 1px rgba(0, 0, 0, 0.9), 0px 1px 1px 0px rgba(255, 255, 255, 0.13);
+	box-shadow: inset 0px 0px 1px 1px rgba(0, 0, 0, 0.9), 0px 1px 1px 0px rgba(255, 255, 255, 0.13);
+}
+
+#slider .bar {
+	width: 388px;
+	height: 5px;
+	background: #333;
+	position: relative;
+	top: -4px;
+	left: 4px;
+
+	background: #1d2e38;
+	background: -moz-linear-gradient(left, #1d2e38 0%, #2b4254 50%, #2b4254 100%);
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#1d2e38), color-stop(50%,#2b4254), color-stop(100%,#2b4254));
+	background: -webkit-linear-gradient(left, #1d2e38 0%,#2b4254 50%,#2b4254 100%);
+	background: -o-linear-gradient(left, #1d2e38 0%,#2b4254 50%,#2b4254 100%);
+	background: -ms-linear-gradient(left, #1d2e38 0%,#2b4254 50%,#2b4254 100%);
+	background: linear-gradient(left, #1d2e38 0%,#2b4254 50%,#2b4254 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1d2e38', endColorstr='#2b4254',GradientType=1 );
+
+	-webkit-border-radius: 40px;
+	-moz-border-radius: 40px;
+	border-radius: 40px;
+}
+
+#slider .highlight {
+	height: 2px;
+	position: absolute;
+	width: 388px;
+	top: 6px;
+	left: 6px;
+
+	-webkit-border-radius: 40px;
+	-moz-border-radius: 40px;
+	border-radius: 40px;
+
+	background: rgba(255, 255, 255, 0.25);
+}
+
+input[type="range"] {
+	-webkit-appearance: none;
+	background-color: black;
+	height: 2px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	position: relative;
+	top: 0px;
+	z-index: 1;
+	width: 11px;
+	height: 11px;
+	cursor: pointer;
+	-webkit-box-shadow: 0px 6px 5px 0px rgba(0,0,0,0.6);
+	-moz-box-shadow: 0px 6px 5px 0px rgba(0,0,0,0.6);
+	box-shadow: 0px 6px 5px 0px rgba(0,0,0,0.6);
+	-webkit-border-radius: 40px;
+	-moz-border-radius: 40px;
+	border-radius: 40px;
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ebf1f6), color-stop(50%,#abd3ee), color-stop(51%,#89c3eb), color-stop(100%,#d5ebfb));
+}
+
+input[type="range"]:hover ~ #rangevalue,input[type="range"]:active ~ #rangevalue {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity=100);
+	opacity: 1;
+	top: -75px;
+}
+
+#rangevalue {
+	color: white;
+	font-size: 10px;
+	text-align: center;
+	font-family:  Arial, sans-serif;
+	display: block;
+	color: #fff;
+	margin: 20px 0;
+	position: relative;
+	left: 44.5%;
+	padding: 6px 12px;
+	border: 1px solid black;
+
+	-webkit-box-shadow: inset 0px 1px 1px 0px rgba(255, 255, 255, 0.2), 0px 2px 4px 0px rgba(0,0,0,0.4);
+	-moz-box-shadow: inset 0px 1px 1px 0px rgba(255, 255, 255, 0.2), 0px 2px 4px 0px rgba(0,0,0,0.4);
+	box-shadow: inset 0px 1px 1px 0px rgba(255, 255, 255, 0.2), 0px 2px 4px 0px rgba(0,0,0,0.4);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#222931), color-stop(100%,#181D21));
+
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	width: 18px;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);
+	opacity: 0;
+
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	-ms-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+	top: -95px;
+} */
